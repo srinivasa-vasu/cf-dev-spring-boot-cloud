@@ -1,0 +1,12 @@
+applications:
+- name: msd-service
+  memory: 768M
+  instances: 1
+  host: mum-cn-spring-msd
+  path: ./target/cn-spring-msd-0.0.1-SNAPSHOT.jar
+  timeout: 180
+  env:
+    JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
+  services:
+  - cns-registry-service
+  - cns-config-service

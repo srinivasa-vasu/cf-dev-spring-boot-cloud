@@ -1,0 +1,13 @@
+applications:
+- name: city-service
+  memory: 768M
+  instances: 1
+  host: cn-spring-city
+  path: ./target/cn-spring-city-0.0.1-SNAPSHOT.jar
+  timeout: 180
+  env:
+    JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
+  services:
+  - cns-config-service
+  - cns-registry-service
+  - mysql-ds

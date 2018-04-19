@@ -1,0 +1,33 @@
+**/.DS_Store
+.DS_Store
+mvnw
+mvnw.cmd
+**/mvnw
+**/mvnw.cmd
+target/
+.mvn/
+.java-version
+!**/.java-version
+!**/.gitignore
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/

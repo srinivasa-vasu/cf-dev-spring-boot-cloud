@@ -1,0 +1,15 @@
+applications:
+- name: gateway-service
+  memory: 768M
+  instances: 1
+  #host: cn-spring-gateway
+  path: ./target/cn-spring-gateway-0.0.1-SNAPSHOT.jar
+  timeout: 180
+  env:
+    JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
+  services:
+  - cns-config-service
+  - cns-registry-service
+  - cns-cb-service
+  routes:
+  - route: https://mum-cn-spring-gateway.cfapps.io

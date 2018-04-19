@@ -1,0 +1,12 @@
+applications:
+- name: asd-service
+  memory: 768M
+  instances: 1
+  host: mum-cn-spring-asd
+  path: ./target/cn-spring-asd-0.0.1-SNAPSHOT.jar
+  timeout: 180
+  env:
+    JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
+  services:
+  - cns-registry-service
+  - cns-config-service
